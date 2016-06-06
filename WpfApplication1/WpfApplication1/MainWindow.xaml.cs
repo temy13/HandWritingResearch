@@ -83,14 +83,14 @@ namespace WpfApplication1
 
         private void image1_StylusDown(object sender, StylusDownEventArgs e)
         {
-            Point pt = e.GetPosition(RootGrid);
+            Point pt = e.GetPosition(image1);
             DrawStart(pt);
             e.Handled = true;
         }
 
         private void image1_StylusMove(object sender, StylusEventArgs e)
         {
-            Point pt = e.GetPosition(RootGrid);
+            Point pt = e.GetPosition(image1);
             DrawContinue(pt);
             e.Handled = true;
         }
