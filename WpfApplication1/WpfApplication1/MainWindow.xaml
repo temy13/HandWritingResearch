@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApplication1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="725">
-    <Canvas x:Name="RootCanvas">
-        <Grid x:Name="RootGrid" Canvas.ZIndex="1">
-            <StackPanel x:Name="MainPanel" Orientation="Vertical">
-                <StackPanel x:Name="QuestionPanel" Orientation="Horizontal">
+        Title="MainWindow" Height="350" Width="1600">
+    <Canvas x:Name="RootCanvas" Width="1600">
+        <Grid x:Name="RootGrid" Canvas.ZIndex="1" Width="1600">
+            <StackPanel x:Name="MainPanel" Orientation="Vertical" Width="1600">
+                <StackPanel x:Name="QuestionPanel" Orientation="Horizontal" Width="1600">
                     <StackPanel Orientation="Vertical">
                         <TextBlock x:Name="QuestionTextBlock">Q.</TextBlock>
-                        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="50">
-                            <Image Name="image1"  StylusDown="image1_StylusDown" StylusMove="image1_StylusMove"
+                        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="100" Width="800">
+                            <Image Name="image1" Width="1600" StylusDown="image1_StylusDown" StylusMove="image1_StylusMove"
                                    StylusUp="image1_StylusUp" MouseUp="image1_MouseUp"
                                 MouseDown="image1_MouseDown" MouseMove="image1_MouseMove" />
                         </Border>

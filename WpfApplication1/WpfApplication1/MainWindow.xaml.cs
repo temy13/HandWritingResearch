@@ -32,7 +32,7 @@ namespace WpfApplication1
         private int strokeNumber = 0;
         private List<Question> solvedQuestionList = new List<Question>();
         private Question solvingQuestion;
-        private Question[] allQuestionArray = new Question[2];
+        private Question[] allQuestionArray = new Question[11];
 
 
         RenderTargetBitmap bitmap;
@@ -50,9 +50,9 @@ namespace WpfApplication1
 
         private void QuestionSet()
         {
-            bitmap = new RenderTargetBitmap(320, 240, 96, 96, PixelFormats.Default);
-            image1.Width = 320;
-            image1.Height = 240;
+            bitmap = new RenderTargetBitmap(800, 100, 96, 96, PixelFormats.Default);
+            image1.Width = 800;
+            image1.Height = 100;
             image1.Source = bitmap;
             QuestionTextBlock.Text = "Q. " + solvingQuestion.question;
             AnswerTextBlock.Text = "A. ";
@@ -201,7 +201,16 @@ namespace WpfApplication1
         private void allQuestionArraySet()
         {
             this.allQuestionArray[0] = new Question("これはぺんですか", "Is this a pen?", 0);
-            this.allQuestionArray[1] = new Question("おなかがすきました", "I'm hungry", 1);
+            this.allQuestionArray[1] = new Question("花見に行くのを楽しみにしていたのに、雨で台なしになった。", "", 1);
+            this.allQuestionArray[2] = new Question("その家は夜とても静かで、なかなか寝つけなかった。", "", 2);
+            this.allQuestionArray[3] = new Question("私たちは健康に有害な食品をそれと知らずに口にしていることが多い。", "", 3);
+            this.allQuestionArray[4] = new Question("素晴らしい人との出会いが人生を豊かにしてくれる。", "", 4);
+            this.allQuestionArray[5] = new Question("忙しくて本が読めないとこぼす人が多いが、その気になれば時間はつくれるものだ。", "", 5);
+            this.allQuestionArray[6] = new Question("日本でも、週末に多くの時間を子供たちと過ごす父親が増えてきた。", "", 6);
+            this.allQuestionArray[7] = new Question("私たちは家に帰る途中、にわか雨にあってびしょ濡れになったうえに、もう少しで道に迷いそうになった。", "", 7);
+            this.allQuestionArray[8] = new Question("こんなに面白い本は読んだことがない。一度読み出したらやめられない。", "", 8);
+            this.allQuestionArray[9] = new Question("この新法の目的は、公共の場での受動喫煙を防止することだ。", "", 9);
+            this.allQuestionArray[10] = new Question("今日ではありとあらゆる類のマニュアルや手引書が氾濫している。", "", 10);
             solvingQuestion = allQuestionArray[0];
         }
 
