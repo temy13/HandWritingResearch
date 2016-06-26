@@ -12,6 +12,8 @@ namespace WpfApplication1
     public class Stroke
     {
         [DataMember]
+        public int id;
+        [DataMember]
         public double x;
         [DataMember]
         public double y;
@@ -19,12 +21,22 @@ namespace WpfApplication1
         public long time;
         [DataMember]
         public int strokeNumber;
-        public Stroke(double x, double y, long time, int strokeNumber)
+        [DataMember]
+        public float pressure;
+        [DataMember]
+        public Boolean isWrite;
+        public Stroke(double x, double y, long time, float pressure)
         {
             this.x = x;
             this.y = y;
             this.time = time;
+            this.pressure = pressure;
+        }
+        public void SetParam(int strokeNumber, int id, Boolean isWrite)
+        {
             this.strokeNumber = strokeNumber;
+            this.id = id;
+            this.isWrite = isWrite;
         }
 
         public void View()

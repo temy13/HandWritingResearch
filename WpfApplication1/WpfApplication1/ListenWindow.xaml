@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfApplication1.ListenWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        Title="HistoryWindow" Height="2000" Width="1000">
+    <StackPanel x:Name="RootPanel" Orientation="Vertical">
+        <StackPanel Orientation="Horizontal">
+            <Button x:Name="Start" Content="Start" Click="Start_Click"/>
+            <Button x:Name="Finish" Content="Finish" Click="Finish_Click"/>
+        </StackPanel>
+        <Border Name="image_border" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="600" Width="1000">
+            <Image Name="image1" Height="600"  Width="1000" StylusDown="image1_StylusDown" StylusMove="image1_StylusMove"
+                                   StylusUp="image1_StylusUp" MouseUp="image1_MouseUp"
+                                MouseDown="image1_MouseDown" MouseMove="image1_MouseMove" 
+                   StylusButtonDown="image1_StylusButtonDown" StylusButtonUp="image1_StylusButtonDown" />
+        </Border>
+    </StackPanel>
+</Window>
